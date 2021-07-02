@@ -25,6 +25,10 @@ X = np.array(data)[:, 1:]
 # One hot encode the label
 y = np_utils.to_categorical(np.array(data['admit']))
 
+# Introducing the train-test split
+(X_train, X_test) = X[50:], X[:50]
+(y_train, y_test) = y[50:], y[:50]
+
 # build the model
 model = Sequential()
 model.add(Dense(128, input_dim=6))
