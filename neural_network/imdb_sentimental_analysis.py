@@ -1,9 +1,12 @@
 import keras
+import os
 from keras.datasets import imdb
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.regularizers import l2
 from keras.preprocessing.text import Tokenizer
+
+BASE_DIR = os.getcwd()
 
 (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",
                                                       num_words=9999,
@@ -81,3 +84,5 @@ print("test loss: {0}, test accuracy: {1}".format(results[0], results[1]))
 test loss: 0.329259991645813, test accuracy: 0.8811200261116028
 
 """
+
+model.save(BASE_DIR+'/models/'+'imdb_review.h5')
