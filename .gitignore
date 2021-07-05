@@ -131,3 +131,6 @@ dmypy.json
 
 # intellij IDE
 .idea/
+
+# ignore the models folder
+neural_network/models/
