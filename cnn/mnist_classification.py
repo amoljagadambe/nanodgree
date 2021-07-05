@@ -123,7 +123,7 @@ _________________________________________________________________
 
 # compile the model
 opt = keras.optimizers.RMSprop(learning_rate=0.001)
-model.compile(loss='categorical_crossentropy', optimizer=opt, metrics={'accuracy'})
+model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
 
 # train the models with callbacks
 """
