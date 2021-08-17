@@ -19,7 +19,7 @@ datagen_train = ImageDataGenerator(
 # use keras to import pre-shuffled CIFAR 10 database
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 """
-image shape: (32, 32, 3)
+image shape: (50000, 32, 32, 3)
 """
 
 # rescale [0,255] --> [0,1]
